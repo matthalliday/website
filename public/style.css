@@ -1,0 +1,150 @@
+:root {
+  --font-sans: "Avenir Next", Avenir, system-ui, sans-serif;
+  --rounded: 0.5rem;
+  --shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 4%))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 10%));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.main {
+  margin-inline: auto;
+  padding-block: 2rem;
+  max-width: 90%;
+
+  @media (width >= 1024px) {
+    display: flex;
+    align-items: center;
+    padding-block: 6rem;
+  }
+
+  @media (width >= 1200px) {
+    max-width: 1024px;
+  }
+
+  @media (width >= 1440px) {
+    max-width: 1248px;
+  }
+
+  img {
+    width: 12rem;
+    height: auto;
+    border-radius: var(--rounded);
+    filter: var(--shadow);
+
+    @media (width >= 1024px) {
+      width: 18rem;
+    }
+
+    @media (width >= 1440px) {
+      width: 24rem;
+    }
+  }
+}
+
+.blurb {
+  margin-block-start: 3rem;
+
+  @media (width >= 1024px) {
+    margin-block-start: 0;
+    padding-inline-start: 5rem;
+  }
+}
+
+.blurb__name {
+  margin-block-end: 1rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+
+  @media (width >= 1440px) {
+    font-size: 3.75rem;
+  }
+}
+
+.blurb__tagline {
+  margin-block-end: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #999;
+
+  @media (width >= 1440px) {
+    margin-block-end: 2.5rem;
+    font-size: 1.75rem;
+  }
+}
+
+.blurb__text {
+  margin-block-end: 2rem;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  @media (width >= 1440px) {
+    margin-block-end: 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+.blurb__links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding-inline-start: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.75;
+
+  @media (width >= 1440px) {
+    gap: 2rem;
+    font-size: 0.875rem;
+    line-height: 1;
+  }
+}
