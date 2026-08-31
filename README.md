@@ -1,0 +1,7 @@
+This repo contains all the source code for my personal website over at [matthalliday.dev](https://matthalliday.dev).
+
+Like many other developers, my own website has been in a constant state of neglect for far too long. Rather than spend a ton of time working on something overly ambitious, like a blog that I promise to update regularly, this instead aims to be something a bit ~less embarrassing~ more modern that won't go stale as quickly and actually says a tiny bit about what I do and what I'm passionate about career-wise.
+
+I honestly don't think I could have made a simpler website if I tried. That is definitely true regarding the aesthetics of the site, but I'm speaking more from the technology side here. There are barely any moving parts, no fancy build tools, and almost no dependencies to keep up to date. There's basically just a static HTML page and a single CSS file. Think of it as a true static site from the olden days: no actual compilation or transformation happens to those files.
+
+Cloudflare handles everything else thanks to [Workers](https://developers.cloudflare.com/workers/) and [Static Assets](https://developers.cloudflare.com/workers/static-assets/). Visitors (if anyone actually visits the site 😅) should get a blazing-fast page thanks to [Worker Cache](https://blog.cloudflare.com/workers-cache/) (incoming requests hit Cloudflare's cache first rather than always hitting the worker). In addition to being fast as heck, it's also entirely free.
