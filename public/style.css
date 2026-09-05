@@ -1,8 +1,24 @@
 :root {
+  color-scheme: light dark;
   --font-sans: "Avenir Next", Avenir, system-ui, sans-serif;
   --rounded: 0.5rem;
   --shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 4%))
     drop-shadow(0 4px 3px rgb(0 0 0 / 10%));
+  --color-bg: #faf5ef; /* warm cream */
+  --color-name: #1c1917; /* warm near-black */
+  --color-tagline: #c2410c; /* terracotta */
+  --color-link: #9a3412; /* deep terracotta */
+  --color-body: #44403c; /* warm stone */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1c1917; /* warm near-black */
+    --color-name: #faf5ef; /* warm cream */
+    --color-tagline: #e8863d; /* softened terracotta */
+    --color-link: #f0955a; /* glowing peach */
+    --color-body: #d6d3d1; /* warm stone light */
+  }
 }
 
 *,
@@ -36,7 +52,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-link);
 
   &:hover,
   &:focus {
@@ -51,6 +67,8 @@ body {
   min-height: 100vh;
   font-family: var(--font-sans);
   line-height: 1.5;
+  color: var(--color-body);
+  background-color: var(--color-bg);
 }
 
 .main {
@@ -102,6 +120,7 @@ body {
   font-size: 2.5rem;
   line-height: 1;
   font-weight: 700;
+  color: var(--color-name);
 
   @media (width >= 1440px) {
     font-size: 3.75rem;
@@ -112,7 +131,8 @@ body {
   margin-block-end: 2rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #999;
+  font-weight: 500;
+  color: var(--color-tagline);
 
   @media (width >= 1440px) {
     margin-block-end: 2.5rem;
